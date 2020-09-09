@@ -104,3 +104,53 @@ code
 
       x is greater
       x+y is 12
+## Loops
+### While loop
+code
+     
+     nums=[1,2,3,4,5]
+      n=0
+      x=0
+      while (n<5):
+          n+=1
+          x=n+x
+          print('when n is {},x is {}'.format(n,x))
+          
+          
+output
+
+      when n is 1,x is 1
+      when n is 2,x is 3
+      when n is 3,x is 6
+      when n is 4,x is 10
+      when n is 5,x is 15
+### For loop
+code
+
+      nums=[1,2,3,4,5]
+      n,m=0,0
+      x=0
+      for n in nums: #by default n+=1
+          x=n+x
+
+          print('when n is {},x is {}'.format(n,x))
+      for m in nums:
+          print(m)
+ 
+ output
+ 
+      when n is 1,x is 1
+      when n is 2,x is 3
+      when n is 3,x is 6
+      when n is 4,x is 10
+      when n is 5,x is 15
+      1
+      2
+      3
+      4
+      5
+      
+      
+      
+      
+    
