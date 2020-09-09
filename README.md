@@ -150,6 +150,51 @@ code
       4
       5
       
+code
+
+      for x in range(0,10,2):
+          print(x)
+
+output
+
+      0
+      2
+      4
+      6
+      8
+
+## Functions
+code
+
+      def add(x,y):
+          z=x+y
+          return z
+      add(100,45)
+
+output
+
+      145
+      
+      
+code (chech prime)
+
+      #prime num check
+      def prime(x):
+          i=0
+          if x<=1:
+              return False
+          for i in range(2,x):
+              if x % i == 0:
+                  return False
+              else:
+                  return True
+                  
+       prime(67)
+       
+       
+output
+      
+      True
       
       
       
