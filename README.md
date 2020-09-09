@@ -35,3 +35,32 @@ output
 output
 
     this is pythonn version 3.7.6
+## IF condition
+code
+
+      x=300
+      y=400
+
+      if x<y:
+          print('hello')
+          print("prints as the condition is true")
+
+
+      z=x
+      x=y
+      y=z #swapped x and y
+
+      print(x); print(y) #';' can be used to write multiple statements in the same line
+
+      if x<y:
+          print('hello')
+          print("prints as the condition is true")
+      print("didn't prrint the above as the condition wasn't true") 
+      
+  output
+  
+      hello
+      prints as the condition is true
+      400
+      300
+      didn't prrint the above as the condition wasn't true
