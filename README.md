@@ -3,9 +3,10 @@ Essential Knowledge to work with python
 
 ## Print Function
 code
-    #The Print Function
-    print("hello world")
-    print('hi world')
+      
+      #The Print Function
+       print("hello world")
+       print('hi world')
 output
 
     hello world
