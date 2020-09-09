@@ -10,3 +10,11 @@ output
 
     hello world
     hi world
+## Import
+
+    import platform
+    print('this is pythonn version {}'.format(platform.python_version()))
+    
+output
+
+    this is pythonn version 3.7.6
