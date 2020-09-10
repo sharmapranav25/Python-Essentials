@@ -176,26 +176,82 @@ output
       145
       
       
-code (chech prime)
+code (check prime)
 
       #prime num check
       def prime(x):
-          i=0
           if x<=1:
               return False
           for i in range(2,x):
               if x % i == 0:
                   return False
-              else:
-                  return True
-                  
-       prime(67)
-       
+          else:
+              return True
+
+      print(prime(67))
+
+      print(prime(9))
+
+      def listofprimes(x):
+          for n in range(2,x):
+          print('Following are all the primes till {}'.format(x))
+              if prime(n) != False:
+                  print(n)
+        
+            
+
+      listofprimes(100)
        
 output
       
       True
+      False
+      Following are all the primes till 100
+      2
+      3
+      5
+      7
+      11
+      13
+      17
+      19
+      23
+      29
+      31
+      37
+      41
+      43
+      47
+      53
+      59
+      61
+      67
+      71
+      73
+      79
+      83
+      89
+      97
       
-      
-      
+
+ ## Class and Objects
+ 
+ code
+ 
+       class dinner: #Class container 
+          mainCourse= 'Indian Food'
+          sweetDish= 'Ice-cream'
+
+          def eat(self):
+              print(self.mainCourse)
+          def sweet(self):
+              print(self.sweetDish)
+
+      HappyMeal = dinner() #Happy Meal is now an object of the class dinner
+      HappyMeal.eat()
+      HappyMeal.sweet()
     
+output
+
+      Indian Food
+      Ice-cream
