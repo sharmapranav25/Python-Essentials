@@ -255,3 +255,43 @@ output
 
       Indian Food
       Ice-cream
+
+
+## Types
+
+code
+
+      x=1
+      print('x is {}'.format(x))
+      print(type(x))
+      y=1.0
+      print('y is {}'.format(y))
+      print(type(y))
+      z='1.0'
+      print('z is {}'.format(z))
+      print(type(z))
+      a={2,3,4,5}
+      print('a is {}'.format(a))
+      print(type(a))
+      b=[1,2,3]
+      print('b is {}'.format(b))
+      print(type(b))
+      c=(1,2)
+      print('c is {}'.format(c))
+      print(type(c))
+      
+output
+
+      x is 1
+      <class 'int'>
+      y is 1.0
+      <class 'float'>
+      z is 1.0
+      <class 'str'>
+      a is {2, 3, 4, 5}
+      <class 'set'>
+      b is [1, 2, 3]
+      <class 'list'>
+      c is (1, 2)
+      <class 'tuple'>
+      
