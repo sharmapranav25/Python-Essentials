@@ -1,5 +1,6 @@
-# Python-Essentials
-Essential Knowledge to work with python
+# Python
+
+wroking with and understanding python
 
 ## Print Function
 code
@@ -201,7 +202,9 @@ code (check prime)
             
 
       listofprimes(100)
-       
+  
+  
+
 output
       
       True
@@ -234,7 +237,35 @@ output
       97
       
 
- ## Class and Objects
+code
+
+
+      def main():
+          x=6
+          print("ID of x ",id(x)) #ID of the object x that stores value 6
+
+          dog(x)
+
+      def dog(y):
+          print("ID of y ",id(y)) #ID of the object y that also stores 6. x and y are the same objects
+          y=7 #Intergers are immutable, after updating y, y become an object of its own
+          print("New ID of y ",id(y)) #ID of object y
+          print("bark")
+
+
+      if __name__  is  '__main__': main() #Main body of the program starts here
+
+
+output
+
+
+      ID of x  140712643109424
+      ID of y  140712643109424
+      New ID of y  140712643109456
+      bark
+
+
+## Class and Objects
  
  code
  
@@ -294,4 +325,35 @@ output
       <class 'list'>
       c is (1, 2)
       <class 'tuple'>
+      
+code
+
+      from decimal import * #importing everything from decimal
+
+      a =Decimal('.10')
+      b=Decimal('.30')
+
+
+      x=.10+.10+.10-.30
+      y=a+a+a-b
+      print(x, type(x))
+      print(y, type(y))
+
+output
+float is not precise as it doesnt have a binary representation. hence the output is diferrent when using 'decimal'
+
+
+      5.551115123125783e-17 <class 'float'>
+      0.00 <class 'decimal.Decimal'>
+      
+### Bool
+bool is logical values and expressions
+code
+
+      x=True
+      print(type(x))
+ 
+output
+
+      <class 'bool'>
       
