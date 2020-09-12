@@ -265,6 +265,134 @@ output
       bark
 
 
+
+code
+
+
+      def main():
+          x=("cute",'paw','good boi')
+          dog(*x)
+
+      def dog(*args):
+          if len(args):
+              for i in args:
+                  print(i)
+          else:
+              print('bark')
+    
+      if __name__ is '__main__': main()
+
+
+output
+
+      cute
+      paw
+      good boi
+      
+      
+code
+ 
+      def main():
+          x=dict(cute='doggo',doggo='paw',who ='is a good boi')
+          dog(**x)
+
+      def dog(**kwargs):
+          if len(kwargs):
+              for k in kwargs:
+                  print("{} {}".format(k,kwargs[k]))
+          else:
+              print('barl')
+
+      if __name__ is '__main__': main()
+      
+      
+      
+output
+
+
+      cute doggo
+      doggo paw
+      who is a good boi
+
+### Genertor
+code:
+
+
+      #inclusive range
+      def main():
+          for i  in inclusive_range(100,60,4,):
+                  print(i, end=' ') #prints in one line
+                  
+          print()
+              
+
+
+      def inclusive_range(*args):
+          numargs = len(args)
+          start=0
+          step=1
+
+          if numargs < 1:
+              raise TypeError('error: need atleast one argument, got {}'.format(numargs))
+
+          elif numargs == 1:
+              stop=args[0]
+
+          elif numargs == 2:
+              (start,stop) = args
+
+          elif numargs == 3:
+              (start,stop,step)=args
+
+          else:
+              raise TypeError('error: atmost three arguments, got {}'.format(numargs))
+
+
+          # Generator
+          x=start
+          if x< stop:
+              while x <= stop:
+                  yield x #yield in generators give out a stream of values
+                  x += step
+          else:
+              while x >= stop:
+                  yield x 
+                  x -= step
+
+
+
+      if __name__ is "__main__" : main()
+      
+      
+      
+      
+output:
+
+
+      100 96 92 88 84 80 76 72 68 64 60
+### Decorators
+
+code:
+
+      #decorator
+      def f1(x):
+          def f2():
+              print("before")
+              x()
+              print("after")
+          return f2
+      @f1 # the function directly below the decorator becomes the argument of the function called in the decorators
+      def f3():
+          print("this is f3")
+
+      f3()
+      
+output:
+
+      before
+      this is f3
+      after
+
 ## Class and Objects
  
  code
@@ -357,3 +485,5 @@ output
 
       <class 'bool'>
       
+
+
