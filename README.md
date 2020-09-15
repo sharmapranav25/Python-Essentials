@@ -13,7 +13,7 @@ output
     hello world
     hi world
   
-code
+code #2
 
     a=2
     b=4
@@ -23,7 +23,7 @@ code
 
     print(c) 
     
-output
+output #2
 
     2
     4
@@ -37,7 +37,7 @@ output
 
     this is pythonn version 3.7.6
 ## Conditionals
-code
+code 
 
       x=300
       y=400
@@ -66,7 +66,7 @@ output
       300
       didn't print the above as the condition wasn't true
      
-code
+code #2
  
       x=1
       y=2
@@ -78,11 +78,11 @@ code
       else:
           print('{} and {} are equal'.format(x,y))
 
-output
+output #2
 
       1 is less than 2
       
-code
+code #3
 
       x=10
       y=2
@@ -101,13 +101,13 @@ code
               print('x is greater')
           print('x+y is {}'.format(z))
           
- output
+ output #3
 
       x is greater
       x+y is 12
 ## Loops
 ### While loop
-code
+code 
      
      nums=[1,2,3,4,5]
       n=0
@@ -151,12 +151,12 @@ code
       4
       5
       
-code
+code #2
 
       for x in range(0,10,2):
           print(x)
 
-output
+output #2
 
       0
       2
@@ -177,7 +177,7 @@ output
       145
       
       
-code (check prime)
+code#2 (check prime)
 
       #prime num check
       def prime(x):
@@ -205,7 +205,7 @@ code (check prime)
   
   
 
-output
+output #2
       
       True
       False
@@ -237,7 +237,7 @@ output
       97
       
 
-code
+code #3
 
 
       def main():
@@ -256,7 +256,7 @@ code
       if __name__  is  '__main__': main() #Main body of the program starts here
 
 
-output
+output #3
 
 
       ID of x  140712643109424
@@ -266,7 +266,7 @@ output
 
 
 
-code
+code #4
 
 
       def main():
@@ -283,14 +283,14 @@ code
       if __name__ is '__main__': main()
 
 
-output
+output #4
 
       cute
       paw
       good boi
       
       
-code
+code #5
  
       def main():
           x=dict(cute='doggo',doggo='paw',who ='is a good boi')
@@ -307,7 +307,7 @@ code
       
       
       
-output
+output #5
 
 
       cute doggo
@@ -395,7 +395,7 @@ output:
 
 ## Class and Objects
  
- code
+ code#1
  
        class dinner: #Class container 
           mainCourse= 'Indian Food'
@@ -410,10 +410,55 @@ output:
       HappyMeal.eat()
       HappyMeal.sweet()
     
-output
+output#2
 
       Indian Food
       Ice-cream
+
+code #2
+
+      class animals:
+          def __init__(self, **kwargs):
+              self._type= kwargs['Type']
+              self._name= kwargs['name']
+              self._sound=kwargs['sound']
+
+
+          def type(self, t=None):
+              if t:self._type =t
+              return self._type
+
+          def name(self, n=None):
+              if n: self._name= n
+              return self._name
+
+          def sound(self, s=None):
+              if s: self._sound= s
+              return self._sound
+
+          def __str__(self):
+              return f'The {self.type()} that makes the sound {self.sound()} is named {self.name()}'
+
+
+      def print_animal(o):
+          if not isinstance(o, animals):
+              raise TypeError("print_animal(): requires an animal")
+          print('The {} that makes sound {} is named {}'.format(o.type(), o.sound(), o.name()))
+
+
+      def main():
+          object1= animals( Type = 'lion', sound = 'roar', name = 'Fluffy') 
+          print_animal(animals( Type = 'dog', sound= 'bark', name= 'Scooby')) #using def print_animal()
+          print(object1) #using just the class animals
+      if __name__ is '__main__' :main()
+      
+
+output #2:
+      
+      
+      The dog that makes sound bark is named Scooby
+      The lion that makes the sound roar is named Fluffy
+
 
 
 ## Types
@@ -454,7 +499,7 @@ output
       c is (1, 2)
       <class 'tuple'>
       
-code
+code #2
 
       from decimal import * #importing everything from decimal
 
@@ -467,7 +512,7 @@ code
       print(x, type(x))
       print(y, type(y))
 
-output
+output #2
 float is not precise as it doesnt have a binary representation. hence the output is diferrent when using 'decimal'
 
 
