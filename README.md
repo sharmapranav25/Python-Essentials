@@ -485,7 +485,7 @@ code
               except AttributeError: return None
           def __str__(self):
               return f'The {self.type()} that makes the sound {self.sound()} is named {self.name()}'
-
+      #Inheritance
       class lions(animals): #parent class animals
           def __init__(self, **kwargs):
               self._type='lion'
