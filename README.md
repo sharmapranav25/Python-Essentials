@@ -700,4 +700,94 @@ output
       (3, 'three', 3)
       drop
       close
+      
+      
+      
+# Sorting
+## Bubble Sort
+      def bubbleSort(data):
+          for i in range(0,len(data),1):
+              for j in range(i):
+                  if data[j] > data[j+1]:
+                      temp = data[j]
+                      data[j] = data[j+1]
+                      data[j+1] = temp
+              print('updated: ', data)       
 
+
+      def main():
+          list1=[18,6,2,46,61,53,99,81,76,78,91]
+          bubbleSort(list1)
+          print('result: ', list1)
+
+      if __name__ is '__main__': main()
+
+output
+
+      updated:  [18, 6, 2, 46, 61, 53, 99, 81, 76, 78, 91]
+      updated:  [6, 18, 2, 46, 61, 53, 99, 81, 76, 78, 91]
+      updated:  [6, 2, 18, 46, 61, 53, 99, 81, 76, 78, 91]
+      updated:  [2, 6, 18, 46, 61, 53, 99, 81, 76, 78, 91]
+      updated:  [2, 6, 18, 46, 61, 53, 99, 81, 76, 78, 91]
+      updated:  [2, 6, 18, 46, 53, 61, 99, 81, 76, 78, 91]
+      updated:  [2, 6, 18, 46, 53, 61, 99, 81, 76, 78, 91]
+      updated:  [2, 6, 18, 46, 53, 61, 81, 99, 76, 78, 91]
+      updated:  [2, 6, 18, 46, 53, 61, 81, 76, 99, 78, 91]
+      updated:  [2, 6, 18, 46, 53, 61, 76, 81, 78, 99, 91]
+      updated:  [2, 6, 18, 46, 53, 61, 76, 78, 81, 91, 99]
+      result:  [2, 6, 18, 46, 53, 61, 76, 78, 81, 91, 99]
+
+## Merge Sort
+      def mergeSort(data):
+          if len(data)>1:
+              mid = len(data)//2
+              leftArray= data[:mid]
+              rightArray= data[mid:]
+
+
+              mergeSort(leftArray)
+              mergeSort(rightArray)
+
+
+              i=0 # for the left side
+              j=0 # for the right side
+              z=0 # fro the merged array
+
+
+              while i < len(leftArray) and j < len(rightArray): 
+                  if leftArray[i] < rightArray[j]:
+                      data[z]=leftArray[i]
+                      i+=1
+                  else:
+                      data[z]=rightArray[j]
+                      j+=1
+                  z +=1
+
+              while i< len(leftArray):
+                  data[z] = leftArray[i]
+                  i +=1
+                  z +=1
+
+              while j< len(rightArray):
+                  data[z] = rightArray[j]
+                  j +=1
+                  z +=1   
+
+
+      def main():
+          item=[18,6,2,46,61,53,99,81,76,78,91]
+          print(item)
+          mergeSort(item)
+          print(item)
+
+      if __name__ is'__main__': main()
+      
+     
+output
+
+      [18, 6, 2, 46, 61, 53, 99, 81, 76, 78, 91]
+      [2, 6, 18, 46, 53, 61, 76, 78, 81, 91, 99]
+     
+  
+  
+      
