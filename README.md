@@ -13,7 +13,7 @@ output
     hello world
     hi world
   
-code #2
+code 2
 
     a=2
     b=4
@@ -23,7 +23,7 @@ code #2
 
     print(c) 
     
-output #2
+output 2
 
     2
     4
@@ -66,7 +66,7 @@ output
       300
       didn't print the above as the condition wasn't true
      
-code #2
+code 2
  
       x=1
       y=2
@@ -78,11 +78,11 @@ code #2
       else:
           print('{} and {} are equal'.format(x,y))
 
-output #2
+output 2
 
       1 is less than 2
       
-code #3
+code 3
 
       x=10
       y=2
@@ -101,7 +101,7 @@ code #3
               print('x is greater')
           print('x+y is {}'.format(z))
           
- output #3
+ output 3
 
       x is greater
       x+y is 12
@@ -151,12 +151,12 @@ code
       4
       5
       
-code #2
+code 2
 
       for x in range(0,10,2):
           print(x)
 
-output #2
+output 2
 
       0
       2
@@ -177,7 +177,7 @@ output
       145
       
       
-code#2 (check prime)
+code 2 (check prime)
 
       #prime num check
       def prime(x):
@@ -205,7 +205,7 @@ code#2 (check prime)
   
   
 
-output #2
+output 2
       
       True
       False
@@ -237,7 +237,7 @@ output #2
       97
       
 
-code #3
+code 3
 
 
       def main():
@@ -256,7 +256,7 @@ code #3
       if __name__  is  '__main__': main() #Main body of the program starts here
 
 
-output #3
+output 3
 
 
       ID of x  140712643109424
@@ -266,7 +266,7 @@ output #3
 
 
 
-code #4
+code 4
 
 
       def main():
@@ -283,14 +283,14 @@ code #4
       if __name__ is '__main__': main()
 
 
-output #4
+output 4
 
       cute
       paw
       good boi
       
       
-code #5
+code 5
  
       def main():
           x=dict(cute='doggo',doggo='paw',who ='is a good boi')
@@ -307,7 +307,7 @@ code #5
       
       
       
-output #5
+output 5
 
 
       cute doggo
@@ -392,6 +392,72 @@ output:
       before
       this is f3
       after
+
+
+
+### Recursion
+
+code 
+
+      #recursion
+      def loop(x):
+          if x==0:
+              raise TypeError('Cant loop Zero Times!')
+          elif x==1:
+              print('loop 1')
+              print('loop complete')
+          else:
+              print(f'loop {x}')
+              loop(x-1)
+
+      loop(10)
+
+
+output 
+
+
+      loop 10
+      loop 9
+      loop 8
+      loop 7
+      loop 6
+      loop 5
+      loop 4
+      loop 3
+      loop 2
+      loop 1
+      loop complete
+
+code 2
+
+      #power
+      def power(num ,pwr):
+          if pwr==0:
+              return 1
+          else:
+              return num * power(num, pwr-1)
+    
+      power(2,3)
+
+output 2
+
+      8     
+      
+code 3
+
+#factorial
+      def fac(num):
+          if num ==0:
+              return 1
+          else:
+              return num * fac(num-1)
+
+      fac(8)
+      
+outout:
+
+      40320
+      
 
 ## Class and Objects
  
