@@ -703,8 +703,8 @@ output
       
       
       
-# Sorting
-## Bubble Sort
+## Sorting
+### Bubble Sort
       def bubbleSort(data):
           for i in range(0,len(data),1):
               for j in range(i):
@@ -737,7 +737,7 @@ output
       updated:  [2, 6, 18, 46, 53, 61, 76, 78, 81, 91, 99]
       result:  [2, 6, 18, 46, 53, 61, 76, 78, 81, 91, 99]
 
-## Merge Sort
+### Merge Sort
       def mergeSort(data):
           if len(data)>1:
               mid = len(data)//2
@@ -790,4 +790,65 @@ output
      
   
   
+### Quick Sort
+
+
+      #quickSort
+      items = [18, 6, 2, 46, 61, 53, 99, 81, 76, 78, 91]
+
+      def quickSort(data, firstPoint, lastPoint):
+          if firstPoint < lastPoint:
+              #to calcuate the split point
+              pivot = partition(data, firstPoint, lastPoint)
+
+              #sorting the two partitions
+              quickSort(data, firstPoint, pivot-1)
+              quickSort(data, pivot+1, lastPoint)
+
+      def partition(dataValues, first, last):
+          #choosing the pivot pont
+          pivotvalue = dataValues[first]  
+          #establishing upper and lower indexes
+          lower= first+1
+          upper= last
+
+          #searching for crossing point
+          done = False
+          while not done:
+              #incrementing the lower index
+              while lower <= upper and dataValues[lower] <= pivotvalue:
+                  lower+=1
+              #decrementing the upper index
+              while upper >= lower and dataValues[upper] >= pivotvalue:
+                  upper-=1
+              #if upper and lower cross each other    
+              if upper<lower:
+                  done=True
+              else:
+                  temp = dataValues[lower]
+                  dataValues[lower]=dataValues[upper]
+                  dataValues[upper]=temp
+
+          #once splint point is found
+          tempr= dataValues[first]
+          dataValues[first]=dataValues[upper]
+          dataValues[upper]=tempr
+
+          return upper
+      def main():
+          print(items)
+          quickSort(items,0,len(items)-1)
+          print(items)
+
+      if __name__ is '__main__':main()
       
+      
+      
+      
+      
+      
+      
+output
+
+      [18, 6, 2, 46, 61, 53, 99, 81, 76, 78, 91]
+      [2, 6, 18, 46, 53, 61, 76, 78, 81, 91, 99]
